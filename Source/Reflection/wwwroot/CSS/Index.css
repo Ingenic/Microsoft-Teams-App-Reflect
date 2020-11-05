@@ -306,7 +306,7 @@ input[type="date"] {
 
 .mood {
     font-family: Segoe UI;
-    font-size: 14px;
+    font-size: 16px;
     color: #252424;
     font-weight: 500;
     margin-left: 16px;
@@ -714,7 +714,7 @@ button:focus {
     border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid #42C66B;
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
 }
 
@@ -727,7 +727,7 @@ button:focus {
     border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid #98BA5A;
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
 }
 
@@ -740,7 +740,7 @@ button:focus {
     border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid #E88356;
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
 }
 
@@ -753,6 +753,6 @@ button:focus {
     border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid #EF5347;
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
 }
