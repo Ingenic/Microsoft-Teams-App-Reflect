@@ -315,10 +315,11 @@ input[type="date"] {
 
 .mood {
     font-family: Segoe UI;
-    font-size: 16px;
+    font-size: 14px;
     color: #252424;
     font-weight: 500;
-    margin-left: 16px;
+    margin-left: 6px;
+    margin-right: 6px;
     margin-bottom: 12px;
 }
 
