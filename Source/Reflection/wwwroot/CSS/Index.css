@@ -333,9 +333,8 @@ input[type="date"] {
 }
 
 .avatars {
-    height: 20px;
-    width: 77px;
-    border-radius: 50%;
+    height: 30px;
+    width: 90px;
     margin-right: 1%;
 }
 
