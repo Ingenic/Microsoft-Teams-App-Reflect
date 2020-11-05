@@ -175,7 +175,7 @@
 
 .blk-content {
     font-family: Segoe UI;
-    font-size: 12px;
+    font-size: 8px;
     color: #252424;
     font-weight: 500;
     margin-bottom: 12px;
@@ -304,7 +304,13 @@ input[type="date"] {
     display: inline-flex;
 }
 
-
+.mood {
+    font-family: Segoe UI;
+    font-size: 10px;
+    color: #252424;
+    font-weight: 500;
+    margin-left: 16px;
+}
 
 .feeling {
     font-family: Segoe UI;
@@ -322,9 +328,13 @@ input[type="date"] {
     margin: 12px 16px 12px 16px;
 }
 
+.moods {
+    margin: 12px 16px 12px 16px;
+}
+
 .avatars {
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 77px;
     border-radius: 50%;
     margin-right: 1%;
 }
