@@ -21,6 +21,9 @@ namespace Microsoft.Teams.Apps.Reflect.Web.Controllers
     using Reflection.Repositories.FeedbackData;
     using Reflection.Repositories.QuestionsData;
     using Reflection.Repositories.ReflectionData;
+    using Reflection.Repositories.ConfidenceData;
+    using Reflection.Repositories.FocusData;
+    using Reflection.Repositories.EnergyData;
 
     /// <summary>
     /// Home controller.
@@ -28,6 +31,9 @@ namespace Microsoft.Teams.Apps.Reflect.Web.Controllers
     public class HomeController : Controller
     {
         private readonly QuestionsDataRepository _repository;
+        private readonly ConfidenceValuesRepository _confvaluerepository;
+        private readonly FocusValuesRepository _focusvaluerepository;
+        private readonly EnergyValuesRepository _energyvaluerepository;
         private readonly IConfiguration _configuration;
         private readonly ReflectionDataRepository _refrepository;
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -39,7 +45,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web.Controllers
         /// Home controller.
         /// </summary>
         public HomeController(QuestionsDataRepository dataRepository, IConfiguration configuration,
-            ReflectionDataRepository refrepository, IWebHostEnvironment webHostEnvironment, TelemetryClient telemetry, IDataBase dbHelper)
+            ReflectionDataRepository refrepository, IWebHostEnvironment webHostEnvironment, TelemetryClient telemetry, IDataBase dbHelper, ConfidenceValuesRepository _confdatarepository, FocusValuesRepository _focusdatarepository, EnergyValuesRepository _energydatarepository)
         {
             _repository = dataRepository;
             _configuration = configuration;
@@ -47,6 +53,9 @@ namespace Microsoft.Teams.Apps.Reflect.Web.Controllers
             _webHostEnvironment = webHostEnvironment;
             _telemetry = telemetry;
             _dbHelper = dbHelper;
+            _confvaluerepository = _confdatarepository;
+            _focusvaluerepository = _focusdatarepository;
+            _energyvaluerepository = _energydatarepository;
         }
 
         /// <summary>
@@ -209,6 +218,75 @@ namespace Microsoft.Teams.Apps.Reflect.Web.Controllers
                 _telemetry.TrackEvent("GetAllDefaultQuestions");
                 var questions = await _repository.GetAllDefaultQuestionsForUser(userName);
                 return questions;
+            }
+            catch (Exception ex)
+            {
+                _telemetry.TrackException(ex);
+                return null;
+            }
+
+        }
+
+        /// <summary>
+        /// kbelling FHL 2020.
+        /// Gets the focus values from list.
+        /// </summary>
+        /// <param name="userName">userName.</param>
+        /// <returns>Values.</returns>
+        [Route("api/GetFocusValues/{userName}")]
+        public async Task<List<FocusValuesDataEntity>> GetFocusValues(string userName)
+        {
+            try
+            {
+                _telemetry.TrackEvent("GetFocusValues");
+                var values = await _focusvaluerepository.GetAllFocusDataForUser(userName);
+                return values;
+            }
+            catch (Exception ex)
+            {
+                _telemetry.TrackException(ex);
+                return null;
+            }
+
+        }
+
+        /// <summary>
+        /// kbelling FHL 2020.
+        /// Gets the energy values from list.
+        /// </summary>
+        /// <param name="userName">userName.</param>
+        /// <returns>Values.</returns>
+        [Route("api/GetEnergyValues/{userName}")]
+        public async Task<List<EnergyValuesDataEntity>> GetEnergyValues(string userName)
+        {
+            try
+            {
+                _telemetry.TrackEvent("GetEnergyValues");
+                var values = await _energyvaluerepository.GetAllEnergyDataForUser(userName);
+                return values;
+            }
+            catch (Exception ex)
+            {
+                _telemetry.TrackException(ex);
+                return null;
+            }
+
+        }
+
+        /// <summary>
+        /// kbelling FHL 2020.
+        /// Gets the focus values from list.
+        /// </summary>
+        /// <param name="userName">userName.</param>
+        /// <returns>Values.</returns>
+        [Route("api/GetConfidenceValues/{userName}")]
+        public async Task<List<ConfidenceValuesDataEntity>> GetConfidenceValues(string userName)
+        {
+            try
+            {
+                _telemetry.TrackEvent("GetConfidenceValues");
+                var values = await _confvaluerepository.GetAllConfidenceDataForUser(userName);
+                return values;
             }
             catch (Exception ex)
             {
