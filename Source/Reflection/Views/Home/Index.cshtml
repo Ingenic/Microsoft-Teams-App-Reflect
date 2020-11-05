@@ -30,19 +30,15 @@
         <div class="cont" id="initialPost">
             <div class="mc">
                 <div class="">
-                    <div class="question">Welcome to the Jungle!</div>
-                    <div class="custom-in">
-                        <select placeholder="Enter a reflection question" style="width: 100%" class="form-control js-example-tags question-length" id="questions" onchange="getSelectedOption(this)">
-                            <optgroup label="My questions">My questions</optgroup>
-                        </select>
-                        <span class="sel-chev"></span>
-                    </div>
+                    <div class="question">How are you feeling today?</div>
+                    <div class="blk-content">Let's configure Olga to check in with you periodically to see how you are doing.</div>
                     <div class="privacy">Privacy</div>
+                    <div class="blk-content">Configure who can see what your mood is like currently.</div>
                     <div class="input-group custom-in ">
                         <select class="cs htmlEle js-example-tags" id="privacy" style="width: 100%" data-minimum-results-for-search="Infinity" onchange="setPrivacy()">
-                            <option value="Public – Names displayed on reflections" selected>Public – Names displayed on reflections</option>
-                            <option value="Anonymous – Names not displayed on reflections">Anonymous – Names not displayed on reflections</option>
-                            <option value="Creator only – Names displayed to the creator only">Creator only – Names displayed to the creator only</option>
+                            <option value="Personal – Only you can see your mood data." selected>Personal – Only you can see your mood data.</option>
+                            <option value="Inner Circle – People you have added to your inner circle can view">Inner Circle – People you have added to your inner circle can view</option>
+                            <option value="Manager & Colleagues - Your manager and colleagues can view">Manager & Colleagues - Your manager and colleagues can view</option>
                         </select>
                         <span class="sel-chev3"></span>
                     </div>
@@ -50,6 +46,8 @@
                         <div class="row custom-rw">
                             <div class="col-6 custom-col">
                                 <div class="date">
+                                    <div class="question">Configure when Olga checks in with you.</div>
+                                    <br>
                                     <div class="blk-head" id="date">Date</div>
                                     <input type="date" data-date="" data-date-format="ddd MMM DD, YYYY" value="" class="date-ip htmlEle" id="execdate" />
                                     <span class="date-icon"></span>
@@ -65,11 +63,10 @@
                                 </div>
                             </div>
                             <div class="col-6 custom-col">
-                                <div class="blk-head rec">Recurrence</div>
+                                <div class="blk-head rec">How often should Olga check back with you?</div>
                                 <div class="selc">
                                     <select class="cs htmlEle js-example-tags" id="recurrence" data-minimum-results-for-search="Infinity" style="width: 100%">
-                                        <option value="Does not repeat" selected class="recurrenceoption">Does not repeat </option>
-                                        <option value="Every weekday" class="recurrenceoption">Every weekday (Mon-Fri)</option>
+                                        <option value="Every weekday" selected class="recurrenceoption">Every weekday (Mon-Fri)</option>
                                         <option value="Daily" class="recurrenceoption">Daily</option>
                                         <option value="Weekly" class="recurrenceoption">Weekly</option>
                                         <option value="Monthly" class="recurrenceoption">Monthly</option>
@@ -143,7 +140,8 @@
                                             </div>
                                         </div>
 
-                                        <div class="finaldates" id="finaldates">Every <span id="customnumber"></span> <span id="customtype"></span> <span id="slectedweeks"></span> starting from <span id="startdatedisplay"></span>
+                                        <div class="finaldates" id="finaldates">
+                                            Every <span id="customnumber"></span> <span id="customtype"></span> <span id="slectedweeks"></span> starting from <span id="startdatedisplay"></span>
                                         </div>
                                     </div>
                                 </div>

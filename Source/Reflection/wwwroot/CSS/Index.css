@@ -173,6 +173,14 @@
     margin-bottom: 12px;
 }
 
+.blk-content {
+    font-family: Segoe UI;
+    font-size: 12px;
+    color: #252424;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
 .custom-rw {
     margin: 0;
 }
