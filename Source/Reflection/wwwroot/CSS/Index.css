@@ -704,3 +704,55 @@ button:focus {
         transform: rotate(360deg);
     }
 }
+
+.btn-great {
+    background-color: #ffffff;
+    color: #42C66B;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    width: 90px;
+    height: 3px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #42C66B;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-good {
+    background-color: #ffffff;
+    color: #98BA5A;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    width: 90px;
+    height: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #98BA5A;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-meh {
+    background-color: #ffffff;
+    color: #E88356;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    width: 90px;
+    height: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #E88356;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-blegh {
+    background-color: #ffffff;
+    color: #EF5347;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    width: 90px;
+    height: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #EF5347;
+    font-size: 14px;
+    cursor: pointer;
+}
