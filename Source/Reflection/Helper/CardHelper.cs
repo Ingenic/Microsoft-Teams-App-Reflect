@@ -446,7 +446,7 @@ namespace Reflection.Helper
                                                         }
                                                     },
                                                     },
-                    new AdaptiveSubmitAction()
+                    new AdaptiveSubmitAction() 
                                                 {
                                                     Title=" ",
                                                     IconUrl=_configuration["BaseUri"] + "/images/Default_2.png",

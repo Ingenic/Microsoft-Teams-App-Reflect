@@ -30,46 +30,22 @@
         <div class="cont" id="initialPost">
             <div class="mc">
                 <div class="">
-                    <div class="question">Question (Max: 150 words)</div>
-                    <div class="custom-in">
-                        <select placeholder="Enter a reflection question" style="width: 100%" class="form-control js-example-tags question-length" id="questions" onchange="getSelectedOption(this)">
-                            <optgroup label="My questions">My questions</optgroup>
-                        </select>
-                        <span class="sel-chev"></span>
-                    </div>
-                    <div class="privacy">Privacy</div>
+                    <div class="privacy">Choose who can see what your current mood is:</div>
                     <div class="input-group custom-in ">
                         <select class="cs htmlEle js-example-tags" id="privacy" style="width: 100%" data-minimum-results-for-search="Infinity" onchange="setPrivacy()">
-                            <option value="Public – Names displayed on reflections" selected>Public – Names displayed on reflections</option>
-                            <option value="Anonymous – Names not displayed on reflections">Anonymous – Names not displayed on reflections</option>
-                            <option value="Creator only – Names displayed to the creator only">Creator only – Names displayed to the creator only</option>
+                            <option value="Personal – Only you can see your mood data." selected>Personal – Only you can see your mood data.</option>
+                            <option value="Inner Circle – People you have added to your inner circle can view">Inner Circle – People you have added to your inner circle can view</option>
+                            <option value="Manager & Colleagues - Your manager and colleagues can view">Manager & Colleagues - Your manager and colleagues can view</option>
                         </select>
                         <span class="sel-chev3"></span>
                     </div>
                     <div class="post">
                         <div class="row custom-rw">
                             <div class="col-6 custom-col">
-                                <div class="date">
-                                    <div class="blk-head" id="date">Date</div>
-                                    <input type="date" data-date="" data-date-format="ddd MMM DD, YYYY" value="" class="date-ip htmlEle" id="execdate" />
-                                    <span class="date-icon"></span>
-                                </div>
-                            </div>
-                            <div class="col-6 custom-col">
-                                <div class="blk-head">Time</div>
-                                <div class="selc">
-                                    <select class="cs htmlEle js-example-basic-single" style="width: 100%" name="state" id="exectime">
-                                        <option value="Send now" id="sendnow" selected>Send now</option>
-                                    </select>
-                                    <span class="sel-chev2"></span>
-                                </div>
-                            </div>
-                            <div class="col-6 custom-col">
-                                <div class="blk-head rec">Recurrence</div>
+                                <div class="blk-head rec">How often should I check back with you?</div>
                                 <div class="selc">
                                     <select class="cs htmlEle js-example-tags" id="recurrence" data-minimum-results-for-search="Infinity" style="width: 100%">
-                                        <option value="Does not repeat" selected class="recurrenceoption">Does not repeat </option>
-                                        <option value="Every weekday" class="recurrenceoption">Every weekday (Mon-Fri)</option>
+                                        <option value="Every weekday" selected class="recurrenceoption">Every weekday (Mon-Fri)</option>
                                         <option value="Daily" class="recurrenceoption">Daily</option>
                                         <option value="Weekly" class="recurrenceoption">Weekly</option>
                                         <option value="Monthly" class="recurrenceoption">Monthly</option>
@@ -155,22 +131,57 @@
                     <div class="br-blk">
                         <div class="created"><img src="~/Images/iconCreator.png" class="previewimg" />Created by<span id="usertext"></span></div>
                         <div class="reflections"><img src="~/Images/iconPrivacy.png" class="previewimg" /> <span id="privacytext">  </span></div>
-                        <div class="feeling" id="selectedTxt"></div>
-                        <div class="smiles">
-                            <span class="ava">
-                                <img src="~/Images/Default_1.png" alt="smile1" class="avatars">
+                        <br>
+                        <div class="mood">Hi there! How are you feeling today?</div>
+                        <div class="moods">
+                            <span class="mood">
+                                Focus:
                             </span>
-                            <span class="ava">
-                                <img src="~/Images/Default_2.png" alt="smile2" class="avatars">
+                            <span>
+                                <button class="btn-great" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Grounded</button>
                             </span>
-                            <span class="ava">
-                                <img src="~/Images/Default_3.png" alt="smile3" class="avatars">
+                            <span>
+                                <button class="btn-good" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Aware</button>
                             </span>
-                            <span class="ava">
-                                <img src="~/Images/Default_4.png" alt="smile4" class="avatars">
+                            <span>
+                                <button class="btn-meh" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Out of it</button>
                             </span>
-                            <span class="ava">
-                                <img src="~/Images/Default_5.png" alt="smile5" class="avatars">
+                            <span>
+                                <button class="btn-blegh" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Disconnected</button>
+                            </span>
+                        </div>
+                        <div class="moods">
+                            <span class="mood">
+                                Energy:
+                            </span>
+                            <span>
+                                <button class="btn-great" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Overflowing</button>
+                            </span>
+                            <span>
+                                <button class="btn-good" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Alright</button>
+                            </span>
+                            <span>
+                                <button class="btn-meh" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Hanging On</button>
+                            </span>
+                            <span>
+                                <button class="btn-blegh" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Drained</button>
+                            </span>
+                        </div>
+                        <div class="moods">
+                            <span class="mood">
+                                Confidence:
+                            </span>
+                            <span>
+                                <button class="btn-great" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Crushing It!</button>
+                            </span>
+                            <span>
+                                <button class="btn-good" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Ok</button>
+                            </span>
+                            <span>
+                                <button class="btn-meh" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Managing</button>
+                            </span>
+                            <span>
+                                <button class="btn-blegh" data-dismiss="modal" onclick="closeTaskModule()" tabindex="0">Overwhelmed</button>
                             </span>
                         </div>
                     </div>
