@@ -48,37 +48,6 @@
                     <div class="post">
                         <div class="row custom-rw">
                             <div class="col-6 custom-col">
-                                <div class="date">
-                                    <div class="blk-head" id="date">Date</div>
-                                    <input type="date" data-date="" data-date-format="ddd MMM DD, YYYY" value="" class="date-ip htmlEle" id="execdate" />
-                                    <span class="date-icon"></span>
-                                </div>
-                            </div>
-                            <div class="col-6 custom-col">
-                                <div class="blk-head">Time</div>
-                                <div class="selc">
-                                    <select class="cs htmlEle js-example-basic-single" style="width: 100%" name="state" id="exectime">
-                                        <option value="Send now" id="sendnow" selected>Send now</option>
-                                    </select>
-                                    <span class="sel-chev2"></span>
-                                </div>
-                            </div>
-                            <div class="col-6 custom-col">
-                                <div class="blk-head rec">Recurrence</div>
-                                <div class="selc">
-                                    <select class="cs htmlEle js-example-tags" id="recurrence" data-minimum-results-for-search="Infinity" style="width: 100%">
-                                        <option value="Does not repeat" class="recurrenceoption">Does not repeat </option>
-                                        <option value="Every weekday" selected class="recurrenceoption">Every weekday (Mon-Fri)</option>
-                                        <option value="Daily" class="recurrenceoption">Daily</option>
-                                        <option value="Weekly" class="recurrenceoption">Weekly</option>
-                                        <option value="Monthly" class="recurrenceoption">Monthly</option>
-                                        <option value="Custom" class="recurrenceoption">Custom</option>
-                                    </select>
-                                    <span class="sel-chev2"></span>
-                                </div>
-                                <div id="customdata"></div>
-                            </div>
-                            <div class="custom-cal col-6 custom-col" id="customrecurrencediv">
                                 <div class="card day">
                                     <div class="card-body">
                                         <div class="recurrence">Recurrence</div>
@@ -96,55 +65,30 @@
                                                 <span class="down-chev"></span>
                                             </div>
                                         </div>
-
-                                        <div class="day-select">
-                                            <button class="weekselect" id="Sunday">S</button>
-                                            <button class="weekselect" id="Monday">M</button>
-                                            <button class="weekselect" id="Tuesday">T</button>
-                                            <button class="weekselect" id="Wednesday">W</button>
-                                            <button class="weekselect" id="Thursday">T</button>
-                                            <button class="weekselect" id="Friday">F</button>
-                                            <button class="weekselect" id="Saturday">S</button>
+                                    </div>
+                                    <div class="col-6 custom-col">
+                                        <div class="blk-head">Time</div>
+                                        <div class="selc">
+                                            <select class="cs htmlEle js-example-basic-single" style="width: 100%" name="state" id="exectime">
+                                                <option value="Send now" id="sendnow" selected>Send now</option>
+                                            </select>
+                                            <span class="sel-chev2"></span>
                                         </div>
-
-                                        <div class="month-cal">
-                                            <div class="form-check">
-                                                <input class="form-check-input on-day-radio" type="radio" name="days-check" id="on-day"
-                                                       value="days" checked>
-                                                <label class="form-check-label on-day" for="on-day">
-                                                    On day
-                                                </label>
-                                                <input name="number" class="number" value="1" id="monthdate" type="text" pattern="\d*" maxlength="2" />
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input on-the-radio" type="radio" name="days-check" id="on-the-day"
-                                                       value="weeks">
-                                                <label class="form-check-label on-day" for="on-the-day">
-                                                    On the
-                                                </label>
-                                                <select name="number" class="day-number" id="weekseries">
-                                                    <option value="First">First</option>
-                                                    <option value="Second">Second</option>
-                                                    <option value="Third">Third</option>
-                                                    <option value="Fourth">Fourth</option>
-                                                    <option value="Last">Last</option>
-                                                </select>
-                                                <select name="number" class="days-text" id="weekday">
-                                                    <option value="Sunday">Sunday</option>
-                                                    <option value="Monday">Monday</option>
-                                                    <option value="Tuesday">Tuesday</option>
-                                                    <option value="Wednesday">Wednesday</option>
-                                                    <option value="Thursday">Thursday</option>
-                                                    <option value="Friday">Friday</option>
-                                                    <option value="Saturday">Saturday</option>
-
-                                                </select>
-                                            </div>
+                                    </div>
+                                    <div class="col-6 custom-col">
+                                        <div class="blk-head rec">Recurrence</div>
+                                        <div class="selc">
+                                            <select class="cs htmlEle js-example-tags" id="recurrence" data-minimum-results-for-search="Infinity" style="width: 100%">
+                                                <option value="Does not repeat" class="recurrenceoption">Does not repeat </option>
+                                                <option value="Every weekday" selected class="recurrenceoption">Every weekday (Mon-Fri)</option>
+                                                <option value="Daily" class="recurrenceoption">Daily</option>
+                                                <option value="Weekly" class="recurrenceoption">Weekly</option>
+                                                <option value="Monthly" class="recurrenceoption">Monthly</option>
+                                                <option value="Custom" class="recurrenceoption">Custom</option>
+                                            </select>
+                                            <span class="sel-chev2"></span>
                                         </div>
-
-                                        <div class="finaldates" id="finaldates">
-                                            Every <span id="customnumber"></span> <span id="customtype"></span> <span id="slectedweeks"></span> starting from <span id="startdatedisplay"></span>
-                                        </div>
+                                        <div id="customdata"></div>
                                     </div>
                                 </div>
                             </div>
