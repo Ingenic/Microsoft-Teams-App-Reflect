@@ -76,19 +76,19 @@ function GetReflections() {
                     }
                     if (i === 1) {
                         color = "green";
-                        img = "Default_1.png";
+                        img = "aaDefault_1.png";
                     } else if (i === 2) {
                         color = "light-green";
-                        img = "Default_2.png";
+                        img = "aaDefault_2.png";
                     } else if (i === 3) {
                         color = "orng";
-                        img = "Default_3.png";
+                        img = "aaDefault_3.png";
                     } else if (i === 4) {
                         color = "red";
-                        img = "Default_4.png";
+                        img = "aaDefault_4.png";
                     } else if (i === 5) {
                         color = "dark-red";
-                        img = "Default_5.png";
+                        img = "aaDefault_5.png";
                     }
                     blockdata =
                             blockdata + 
