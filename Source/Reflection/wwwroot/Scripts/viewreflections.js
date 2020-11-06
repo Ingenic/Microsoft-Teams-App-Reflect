@@ -56,7 +56,7 @@ $(document).ready(function () {
         var color = "";
         for (i = 1; i <= 5; i++) {
             if (i.toString() === feedbackvalue) {
-                $("#selectedimage").attr("src", "/images/Default_" + i + ".png");
+                $("#selectedimage").attr("src", "/images/aaDefault_" + i + ".png");
                 $(".select-img").removeClass("active");
                 $("#img" + i).addClass("active");
                 $(".check-in").hide();
@@ -86,7 +86,7 @@ $(document).ready(function () {
                 else if (imgid === "5")
                     color = "#FEE6E3";
                 $(".emoji-selected").css("background-color", color);
-                $(".selected-img").attr("src", "/Images/Default_" + imgid + ".png");
+                $(".selected-img").attr("src", "/Images/aaDefault_" + imgid + ".png");
                 $(".selected-img").show();
                 $(".select-img").removeClass("active");
                 $("#img" + imgid).addClass("active");
@@ -123,7 +123,7 @@ $(document).ready(function () {
                 }),
                 success: function (data) {
                     if (data !== null && data !== 0) {
-                        $("#selectedimage").attr("src", "/images/Default_" + data + ".png");
+                        $("#selectedimage").attr("src", "/images/aaDefault_" + data + ".png");
                         $(".select-img").removeClass("active");
                         $("#img" + data).addClass("active");
                         $(".check-in").hide();
@@ -236,24 +236,20 @@ function GetReflections() {
                     }
                     if (i === 1) {
                         color = "green";
-                        img = "Default_1.png";
+                        img = "aaDefault_1.png";
                         altText = "Thrilled";
                     } else if (i === 2) {
                         color = "light-green";
-                        img = "Default_2.png";
+                        img = "aaDefault_2.png";
                         altText = "Happy";
                     } else if (i === 3) {
                         color = "orng";
-                        img = "Default_3.png";
+                        img = "aaDefault_3.png";
                         altText = "Calm";
                     } else if (i === 4) {
                         color = "red";
-                        img = "Default_4.png";
+                        img = "aaDefault_4.png";
                         altText = "Sad";
-                    } else if (i === 5) {
-                        color = "dark-red";
-                        img = "Default_5.png";
-                        altText = "Troubled";
                     }
                     blockdata =
                         blockdata +
@@ -325,20 +321,17 @@ function openDetailReflection(feedbackId, reflectionId) {
     let width = (datacount * 100 / totalcount).toFixed(0);
     if (feedbackId === 1) {
         color = "green";
-        img = "Default_1.png";
+        img = "aaDefault_1.png";
     } else if (feedbackId === 2) {
         color = "light-green";
-        img = "Default_2.png";
+        img = "aaDefault_2.png";
     } else if (feedbackId === 3) {
         color = "orng";
-        img = "Default_3.png";
+        img = "aaDefault_3.png";
     } else if (feedbackId === 4) {
         color = "red";
-        img = "Default_4.png";
-    } else if (feedbackId === 5) {
-        color = "dark-red";
-        img = "Default_5.png";
-    }
+        img = "aaDefault_4.png";
+    } 
     let blockdata ='<div class="media pb-2"><img src="../../../Images/' +
         img +
         '" class="align-self-start smils" alt="smile2"><div class="media-body cb-smile2"><div class="progress custom-pr"><div class="progress-bar bg-' +
