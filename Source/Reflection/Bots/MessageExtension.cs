@@ -133,7 +133,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web
                 }
                 else
                 {
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Hello from the TeamsMessagingExtensionsActionPreviewBot."), cancellationToken);
+                    await turnContext.SendActivityAsync(MessageFactory.Text($"Hello from Olga."), cancellationToken);
                 }
 
             }
@@ -304,7 +304,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web
                         {
                             Height = 600,
                             Width = 600,
-                            Title = "Make space for people to share how they feel",
+                            Title = "Track how you're feeling every day.",
                             Url = reldata.data.URL + reflectionid + '/' + feedbackId + '/' + response.userName,
                         },
                     },
@@ -406,7 +406,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web
                                 {
                                     Height = 600,
                                     Width = 780,
-                                    Title = "Make space for people to share how they feel",
+                                    Title = "Track how you're feeling every day.",
                                     Url = this._configuration["BaseUri"] + "/ManageRecurringPosts/" + postCreatedByEmail + "?pathfromindex=true"
                                 },
                             },
@@ -422,7 +422,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web
                                 {
                                     Height = 600,
                                     Width = 780,
-                                    Title = "Make space for people to share how they feel",
+                                    Title = "Track how you're feeling every day.",
                                     Url = this._configuration["BaseUri"] + "/openReflectionFeedback/" + taskInfo.reflectionID + "/" + taskInfo.feedback,
                                 },
                             },
@@ -441,7 +441,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web
 
                                 }
                                 await turnContext.DeleteActivityAsync(taskInfo.messageID);
-                                activity.Text = "This Reflect poll has been removed";
+                                activity.Text = "This post has been removed";
                                 await turnContext.SendActivityAsync(activity);
                                 return null;
                             }
@@ -493,7 +493,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web
                             {
                                 Height = 620,
                                 Width = 800,
-                                Title = "Make space for people to share how they feel",
+                                Title = "Track how you're feeling every day.",
                                 Url = url
                             },
                         },
@@ -521,7 +521,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web
                                 {
                                     Height = 100,
                                     Width = 300,
-                                    Title = "Make space for people to share how they feel",
+                                    Title = "Track how you're feeling every day.",
                                     Card = attachmentfeedback
                                 },
                             },
@@ -545,7 +545,7 @@ namespace Microsoft.Teams.Apps.Reflect.Web
                             {
                                 Height = 620,
                                 Width = 800,
-                                Title = "Make space for people to share how they feel",
+                                Title = "Track how you're feeling every day.",
                                 Url = url
                             },
                         },
