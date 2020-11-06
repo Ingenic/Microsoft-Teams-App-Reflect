@@ -38,5 +38,20 @@ namespace Reflection.Repositories.FeedbackData
         /// Gets or sets Feedback.
         /// </summary>
         public int Feedback { get; set; }
+
+        /// <summary>
+        /// Gets or sets Focus.
+        /// </summary>
+        public int FocusScore { get; set; }
+
+        /// <summary>
+        /// Gets or sets Energy.
+        /// </summary>
+        public int EnergyScore { get; set; }
+
+        /// <summary>
+        /// Gets or sets Confidence.
+        /// </summary>
+        public int ConfidenceScore { get; set; }
     }
 }
