@@ -236,19 +236,19 @@ function GetReflections() {
                     }
                     if (i === 1) {
                         color = "green";
-                        img = "grounded-selected.png";
+                        img = "../../../Images/grounded-selected.png";
                         altText = "Thrilled";
                     } else if (i === 2) {
                         color = "light-green";
-                        img = "aware-selected.png";
+                        img = "../../../Images/aware-selected.png";
                         altText = "Happy";
                     } else if (i === 3) {
                         color = "orng";
-                        img = "outofit-selected.png";
+                        img = "../../../Images/outofit-selected.png";
                         altText = "Calm";
                     } else if (i === 4) {
                         color = "red";
-                        img = "disconnected-selected.png";
+                        img = "../../../Images/disconnected-selected.png";
                         altText = "Sad";
                     } 
                     blockdata =
