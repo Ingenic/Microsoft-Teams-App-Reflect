@@ -216,7 +216,7 @@ function GetReflections() {
                     totalcount = totalcount + feedback[x].length;
                 });
                 for (i = 1; i <= 5; i++) {
-                    if (Object.keys(focusScore).indexOf(i.toString()) !== -1) {
+                    if (Object.keys(feedback).indexOf(i.toString()) !== -1) {
                         datacount = feedback[i].length;
                         description =
                             reflection.Privacy === "Anonymous – Names not displayed on reflections"
@@ -236,21 +236,25 @@ function GetReflections() {
                     }
                     if (i === 1) {
                         color = "green";
-                        img = "../../../Images/grounded-selected.png";
+                        img = "Default_1.png";
                         altText = "Thrilled";
                     } else if (i === 2) {
                         color = "light-green";
-                        img = "../../../Images/aware-selected.png";
+                        img = "Default_2.png";
                         altText = "Happy";
                     } else if (i === 3) {
                         color = "orng";
-                        img = "../../../Images/outofit-selected.png";
+                        img = "Default_3.png";
                         altText = "Calm";
                     } else if (i === 4) {
                         color = "red";
-                        img = "../../../Images/disconnected-selected.png";
+                        img = "Default_4.png";
                         altText = "Sad";
-                    } 
+                    } else if (i === 5) {
+                        color = "dark-red";
+                        img = "Default_5.png";
+                        altText = "Troubled";
+                    }
                     blockdata =
                         blockdata +
                     '<div  class="media"><img src="../../../Images/' +
