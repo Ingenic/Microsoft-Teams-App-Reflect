@@ -30,15 +30,18 @@
         <div class="cont" id="initialPost">
             <div class="mc">
                 <div class="">
-                    <div class="question">
-                        <select id="questions" onchange="getSelectedOption(this)">Let's configure how Olga behaves...</select>
+                    <div class="question">Configure Olga to suit your needs...</div>
+                    <div class="custom-in">
+                        <select placeholder="Capture my Focus, Energy & Confidence levels" style="width: 100%" class="form-control js-example-tags question-length" id="questions" onchange="getSelectedOption(this)">
+                        </select>
+                        <span class="sel-chev"></span>
                     </div>
                     <div class="privacy">Privacy</div>
                     <div class="input-group custom-in ">
                         <select class="cs htmlEle js-example-tags" id="privacy" style="width: 100%" data-minimum-results-for-search="Infinity" onchange="setPrivacy()">
-                            <option value="Public – Names displayed on reflections" selected>Public – Names displayed on reflections</option>
-                            <option value="Anonymous – Names not displayed on reflections">Anonymous – Names not displayed on reflections</option>
-                            <option value="Creator only – Names displayed to the creator only">Creator only – Names displayed to the creator only</option>
+                            <option value="Public – Names displayed on reflections" selected>Personal – Only you can see your mood data.</option>
+                            <option value="Anonymous – Names not displayed on reflections">Inner Circle – People you have added to your inner circle can view</option>
+                            <option value="Creator only – Names displayed to the creator only">Manager & Colleagues - Your manager and colleagues can view</option>
                         </select>
                         <span class="sel-chev3"></span>
                     </div>
